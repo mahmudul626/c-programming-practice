@@ -9,9 +9,9 @@ void controler();
 
 int main()
 {
-    int inputV = 220;
+    int inputV = 230;
     char love = 3.7;
-    printf("           Ai Based Charging System \n");
+    printf("           Embedded Charging System \n");
     printf("          -------------------------- \n");
     printf("                                     \n");
     printf("Rectifing... \n%dv Ac to %dv Dc \n", inputV, rectifire());
@@ -58,8 +58,8 @@ void controler()
 }
 
 int rectifire() {
-    int inputV = 220;
-    float rectifyV = inputV / 18;
+    int inputV = 230;
+    float rectifyV = inputV / 9;
     return rectifyV;
 } float phone() {
     float pbv = 3.7;
