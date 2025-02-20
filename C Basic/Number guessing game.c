@@ -1,10 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int  main ()
 {
-    int input, n, limit = 3, secretNum = 5;
+    int input, limit = 3;
+    srand(time(0));
+    int secretNum = rand() % 10 + 1;
     printf("\t Number Guessing Game \n");
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 10; i++)
     {
         printf("Chance : %d time \n", limit);
         printf("Enter number : ");
