@@ -1,0 +1,18 @@
+# Binary files
+*.out
+*.o
+*.exe
+a.out
+main
+*.bin
+*.hex
+*.elf
+
+# Backup & temporary files
+*~
+*.swp
+*.bak
+
+# IDE-specific
+.vscode/
+.idea/
