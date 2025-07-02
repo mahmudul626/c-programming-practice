@@ -59,5 +59,6 @@ int main() {
     }else {
         printf("%d", count);
     }
+    free(item_price);
     return 0;
 }

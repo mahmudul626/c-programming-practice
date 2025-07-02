@@ -78,5 +78,7 @@ int main() {
         
     }
     printf("%d\n%d\n", apple_count, orange_count);
+    free(apple_dis);
+    free(orange_dis);
     return 0;
 }

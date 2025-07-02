@@ -70,5 +70,6 @@ int main() {
     }
     
     printf("%d %d", max_record_break, min_record_break);
+    free(score);
     return 0;
 }
