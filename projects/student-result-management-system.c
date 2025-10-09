@@ -95,10 +95,6 @@ void ViewResult(int num) {
     fclose(fptr);
 }
 void DeleteRecord(int num) {
-    FILE *fptr;
-    fptr = fopen("student.txt", "w");
-    fprintf(fptr, "\n");
-    fprintf(fptr, "\tData Not Found");
     printf("Deleting");
     sleep(1);
     printf(".");
@@ -106,8 +102,11 @@ void DeleteRecord(int num) {
     printf(".");
     sleep(1);
     printf(".");
-    sleep(1);
     printf("\n");
+    FILE *fptr;
+    fptr = fopen("student.txt", "w");
+    fprintf(fptr, "\n");
+    fprintf(fptr, "\tData Not Found\n");
     printf("Done");
     fclose(fptr);
 }
@@ -122,41 +121,53 @@ int main()
     printf("2. Enter Results \n");
     printf("3. View Results \n");
     printf("4. Delete Student Record \n");
-    printf("5. Exit \n");
     printf("Enter : ");
     scanf("%d", &n);
-    switch (n)
-    {
-    case 1:
-        AddStudent(info);
-        main();
-        break;
-    case 2:
-        EnterResult(num);
-        main();
-        break;
-    case 3:
-        ViewResult(num);
-        main();
-        break;
-    case 4:
-        DeleteRecord(num);
-        main();
-        break;
+    // switch (n)
+    // {
+    // case 1:
+    //     AddStudent(info);
+    //     main();
+    //     break;
+    // case 2:
+    //     EnterResult(num);
+    //     main();
+    //     break;
+    // case 3:
+    //     ViewResult(num);
+    //     main();
+    //     break;
+    // case 4:
+    //     DeleteRecord(num);
+    //     main();
+    //     break;
     
-    case 5:
-        printf("Exiting");
-        sleep(1);
-        printf(".");
-        sleep(1);
-        printf(".");
-        sleep(1);
-        printf(".");
-        sleep(1);
-        break;
-    default:
-        printf("This option does not available");
-        break;
+    // case 5:
+    //     printf("Exiting");
+    //     sleep(1);
+    //     printf(".");
+    //     sleep(1);
+    //     printf(".");
+    //     sleep(1);
+    //     printf(".");
+    //     sleep(1);
+    //     break;
+    // default:
+    //     printf("This option does not available");
+    //     break;
+    // }
+    
+    while (n)
+    {
+        if (n == 1) AddStudent(info) ; break;
+        if (n == 2) EnterResult(num);
+        if (n == 3) ViewResult(num);
+        if (n == 4) DeleteRecord(num);
+        
     }
+    
+    
+    
+    
     return 0;
 }
